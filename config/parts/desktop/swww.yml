@@ -1,0 +1,10 @@
+modules:
+  - type: rpm-ostree
+    install:
+      - lz4
+      - cargo
+      - scdoc
+      - jq
+  - type: script
+    scripts:
+      - "desktop/install-swww.sh"

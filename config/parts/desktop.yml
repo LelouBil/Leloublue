@@ -1,0 +1,42 @@
+modules:
+  # bureau de base
+  - from-file: parts/desktop/swww.yml
+  - from-file: parts/desktop/eww.yml
+  - from-file: parts/desktop/brillo.yml
+  - type: rpm-ostree
+    install:
+      - hyprland
+      - kitty
+      - waybar
+      - dunst
+      - swaylock
+      - wofi
+      - pipewire
+      - wireplumber
+      - network-manager-applet
+  - type: files
+    files:
+      - "desktop/config": /
+  - type: files
+    files:
+      - "desktop/fonts": /
+  - type: files
+    files:
+      - "desktop/sessions": /
+  - type: files
+    files:
+      - "desktop/sddm": /
+  # util
+  - from-file: parts/desktop/cliphist.yml
+  - type: rpm-ostree
+    install:
+      - copyq
+  - from-file: parts/desktop/wl-clip-persist.yml
+      # - hyprpicker
+  # compatibilité
+  - type: rpm-ostree
+    install:
+      - xdg-desktop-portal-hyprland
+      - polkit-kde
+      - qt6-qtwayland
+      - qt5-qtwayland

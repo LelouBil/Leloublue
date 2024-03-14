@@ -1,0 +1,10 @@
+modules:
+  - type: rpm-ostree
+    install:
+      - wl-clipboard
+      - xdg-utils
+      - go
+      - jq
+  - type: script
+    scripts:
+      - "desktop/install-cliphist.sh"

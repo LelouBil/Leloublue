@@ -1,0 +1,31 @@
+* {all: unset}
+
+
+.powermenu {
+  border: 4px solid white;
+  border-radius: 3px;
+  background-color: black;
+}
+
+
+
+label {
+  font-family: "VCR OSD Mono";
+  font-size: x-large;
+  background-color: transparent;
+}
+
+
+.inactive {
+  border: red 20px solid;
+}
+
+button {
+  background-color: black;
+  border: white 4px solid;
+  transition-duration: 0.2s;
+}
+button:hover{
+  background-color: gray;
+  transition-duration: 0.2s;
+}

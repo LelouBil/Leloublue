@@ -1,0 +1,11 @@
+modules:
+  - type: rpm-ostree
+    install:
+      - cargo
+      - wayland-devel
+      - wayland-protocols-devel
+      - jq
+      - pkgconf-pkg-config
+  - type: script
+    scripts:
+      - "desktop/install-wl-clip-persist.sh"

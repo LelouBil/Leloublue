@@ -1,0 +1,97 @@
+{
+     "layer": "top", // Waybar at top layer
+     "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 40, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 4, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "margin-top":8,
+    "margin-left":15,
+    "margin-right":15,
+    "margin-bottom":0,
+    "reload_style_on_change": true,
+    "modules-left": ["hyprland/workspaces","clock#time","clock#date"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["pulseaudio", "network", "tray" ,"bluetooth" ,"battery"],
+    // Modules configuration
+     "battery":{
+         "bat":"BAT1",
+         "design-capacity": true,
+       "interval": 2,
+         "states":{
+            "critical":10,
+            "low":25,
+            "half":50,
+            "high":80,
+            "full":100,
+        },
+         "format":"{capacity}% {icon}",
+         "format-charging":"{capacity}% ",
+         "format-icons": {
+            "critical":"",
+            "low":"",
+            "half":"",
+            "high":"",
+            "full":""
+        },
+         "format-time":"{H}h {m}",
+         "on-click": "$SYSTEM_EWW open --toggle powerprofile-selector " // open eww with power profile selector
+
+    },
+    "bluetooth": {
+        "format-off":"",
+        "format-disabled":"",
+        "format-on":"",
+        "format-connected":"󰂰"
+    },
+    "clock#time":{
+        "format":"{:󰥔 %H:%M}",
+        "locale":"fr_FR.UTF-8",
+    },
+  "clock#date": {
+    "format": "{:\uDB80\uDCED %A %d/%m}",
+    "locale":"fr_FR.UTF-8",
+    "tooltip-format": "<span font_family='VCR OSD Mono' line_height='2'>{calendar}</span>",
+    "calendar": {
+      "mode": "month",
+      "format": {
+        "months": "<span>{}</span>",
+        "weekdays": "<span color='#FF0024ff'>{}</span>",
+        "today": "<span color='#17DCF5'><b><u>{}</u></b></span>"
+      }
+    }
+
+  },
+    "hyprland/workspaces":{
+        "format": "{windows}",
+        "format-window-separator": " ",
+        "window-rewrite-default": "\uEB7F",
+  "window-rewrite": {
+    "title<.*youtube.*>": "", // Windows whose titles contain "youtube"
+    "class<org.mozilla.firefox>": "", // Windows whose classes are "firefox"
+    "class<kitty>":"",
+    "class<vesktop>":"󰙯",
+    "class<jetbrains-idea>": "\uE7B5"
+	},
+	"persistent-workspaces":{
+      "*":5
+	},
+
+    },
+    "network":{
+        "format-wifi":"{essid} ",
+        "format-ethernet":"󰈀",
+        "format-disconnected":"󰅛",
+        "tooltip-format-wifi":"{ipaddr}",
+        "tooltip-format-ethernet":"{essid} {ipaddr}",
+        "on-click":"pgrep -f nm-applet && killall nm-applet || nm-applet"
+    },
+    "pulseaudio":{
+        "format-muted":"󰖁",
+        "format":"{volume}% 󰕾"
+    },
+  "tray": {
+    "spacing": 4
+  }
+}
+

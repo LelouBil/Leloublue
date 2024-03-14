@@ -1,0 +1,1 @@
+launch zsh -c "zsh;while hyprctl activewindow -j | jq -e '.workspace.name == \"special:quake\"' > /dev/null; do zsh; done"

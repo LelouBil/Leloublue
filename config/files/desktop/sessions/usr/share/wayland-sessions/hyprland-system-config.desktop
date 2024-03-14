@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Hyprland (System configuration)
+Comment=An intelligent dynamic tiling Wayland compositor
+Exec=/usr/share/desktop-config/launch.sh
+Type=Application

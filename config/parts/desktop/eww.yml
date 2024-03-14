@@ -1,0 +1,15 @@
+modules:
+  - type: rpm-ostree
+    install:
+      - cargo
+      - glib2-devel
+      - gtk3-devel
+      - gtk-layer-shell-devel
+      - pango-devel
+      - gdk-pixbuf2-devel
+      - libgcc
+      - glibc-devel
+      - jq
+  - type: script
+    scripts:
+      - "desktop/install-eww.sh"

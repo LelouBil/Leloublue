@@ -1,0 +1,181 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: "Symbols Nerd Font","VCR OSD Mono", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 10pt;
+    border: none;
+    border-radius: 0;
+    /* CSS HEX */
+    /*--vivid-sky-blue: #17DCF5ff;*/
+    /*--black-bean: #290100ff;*/
+    /*--ut-orange: #FB8602ff;*/
+    /*--white: #FDFDFDff;*/
+    /*--jasmine: #FFDB7Bff;*/
+    /*--red-cmyk: #FF0024ff;*/
+}
+
+.time {
+    margin-left: 2em;
+}
+.date {
+    margin-left: 2em;
+}
+
+
+
+window#waybar {
+    background-color: transparent;
+    min-height: 40px;
+    border: none;
+}
+
+#window{
+    min-width: 27.1em;
+    /*margin-left: 8em;*/
+}
+
+#workspaces {
+    background-color: #000000;
+    /*border-top-left-radius: 10px;*/
+    /*border-bottom-left-radius: 10px;*/
+    /*margin-left: 0.2em;*/
+    /*margin-right: 10em;*/
+}
+
+#workspaces button:nth-child(1) {
+    /*margin-left: 0;*/
+}
+
+#workspaces button{
+    /*border-radius: 0;*/
+    border-color: #FF0024;
+    border-width: 3px;
+    border-style: none solid none none;
+    /*margin: 0 0.2em;*/
+
+}
+#workspaces button:hover{
+    background: inherit;
+    box-shadow: none;
+}
+#workspaces button.focused {
+    box-shadow: none;
+    background: inherit;
+}
+
+
+#workspaces button.active {
+    background-color: #FDFDFD;
+    box-shadow: none;
+    /*border-radius: 0;*/
+    margin-left: -0.05em;
+    color: black;
+}
+
+
+
+#workspaces button.active:nth-child(1) {
+    background-color: #FDFDFD;
+    color: black;
+    /*border-top-left-radius: 8px;*/
+    /*border-bottom-left-radius: 8px;*/
+    margin-left: -0.02em;
+    border-width: 3px;
+    border-style: none solid none none;
+}
+
+tooltip {
+    background-color: black;
+    opacity: 0.9;
+}
+
+
+
+.modules-left {
+    background-color:transparent;
+    min-width: 700px;
+    /*border-radius: 10px;*/
+    background-position: -5px 0;
+    background-repeat: no-repeat;
+    background-image: url("file:///home/leloubil/Images/waybar.png");
+}
+
+
+.modules-center {
+    background-color: transparent;
+    min-width: 35.5em;
+    margin-left: -9.5em;
+    border: none;
+    background-position: -30px 0;
+    background-image: url("file:///home/leloubil/Images/waybar-flipped.png");
+    padding-left: 10em;
+    /*background-*/
+}
+/* 514 -> */
+
+#pulseaudio {
+    margin-right: 1em;
+    padding-left: 1.3em;
+    border-left-color: #FF0024;
+    border-left-style: solid;
+    border-left-width: 3px;
+}
+
+#network {
+    padding-left: 1.3em;
+    border-left-color: #FF0024;
+    border-left-style: solid;
+    border-left-width: 3px;
+}
+
+#tray {
+    padding-left: 1.3em;
+    border-left-color: #FF0024;
+    border-left-style: solid;
+    border-left-width: 3px;
+    margin: 0 1em;
+}
+
+
+#bluetooth {
+    margin-right: 1em;
+}
+
+#battery {
+    padding-right: 1em;
+    padding-left: 1em;
+    margin-right: 0;
+    border-left-color: #FF0024;
+    border-left-style: solid;
+    border-left-width: 3px;
+}
+
+@keyframes blink {
+    to {
+        background-color: #FDFDFD;
+        color: black
+    }
+}
+
+#battery.critical:not(.charging){
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+
+
+#battery.low:not(.charging) {
+    background-color: red;
+    border: 3px solid white;
+}
+
+.modules-right {
+    background-color: black;
+    min-width: 29.1em;
+    border: none;
+    padding-right: 0;
+    /*border-top-right-radius: 10px;*/
+    /*border-bottom-right-radius: 10px;*/
+}

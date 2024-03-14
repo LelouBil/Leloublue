@@ -1,0 +1,7 @@
+modules:
+  - type: rpm-ostree
+    install:
+      - go-md2man
+  - type: script
+    scripts:
+      - "desktop/install-brillo.sh"
