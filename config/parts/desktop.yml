@@ -1,9 +1,9 @@
 modules:
   # bureau de base
-  - from-file: parts/desktop/swww.yml
-  - from-file: parts/desktop/eww.yml
-  - from-file: parts/desktop/brillo.yml
   - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/leloubil/brillo/repo/fedora-%OS_VERSION%/leloubil-brillo-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-%OS_VERSION%/solopasha-hyprland-fedora-%OS_VERSION%.repo
     install:
       - hyprland
       - kitty
@@ -14,6 +14,9 @@ modules:
       - pipewire
       - wireplumber
       - network-manager-applet
+      - brillo
+      - swww
+      - eww-wayland-git
   - type: files
     files:
       - "desktop/config": /
@@ -27,11 +30,12 @@ modules:
     files:
       - "desktop/sddm": /
   # util
-  - from-file: parts/desktop/cliphist.yml
   - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-%OS_VERSION%/solopasha-hyprland-fedora-%OS_VERSION%.repo
     install:
+      - cliphist
       - copyq
-  - from-file: parts/desktop/wl-clip-persist.yml
       # - hyprpicker
   # compatibilité
   - type: rpm-ostree
