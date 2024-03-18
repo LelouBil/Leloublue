@@ -12,7 +12,7 @@
     "reload_style_on_change": true,
     "modules-left": ["hyprland/workspaces","clock#time","clock#date"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["pulseaudio", "network", "tray" ,"bluetooth" ,"battery"],
+    "modules-right": ["pulseaudio", "custom/dnd","network", "tray" ,"bluetooth" ,"battery"],
     // Modules configuration
      "battery":{
          "bat":"BAT1",
@@ -89,6 +89,11 @@
     "pulseaudio":{
         "format-muted":"󰖁",
         "format":"{volume}% 󰕾"
+    },
+    "custom/dnd": {
+        "exec":"(dunstctl is-paused| grep true > /dev/null) && echo '󰂜' || echo '󰪑'",
+        "interval":"once",
+        "on-click":"dunstctl set-paused toggle"
     },
   "tray": {
     "spacing": 4
