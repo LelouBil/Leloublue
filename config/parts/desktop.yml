@@ -19,6 +19,9 @@ modules:
       - pyprland
       - hyprland-contrib
       - hyprland-plugins
+      - hyprlock
+      - hypridle
+      - hyprpicker
   - type: files
     files:
       - "desktop/config": /
