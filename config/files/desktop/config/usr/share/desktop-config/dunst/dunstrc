@@ -231,7 +231,7 @@
     ### Misc/Advanced ###
 
     # dmenu path.
-    dmenu = /usr/bin/wofi --show dmenu -p dunst:
+    dmenu = /usr/bin/wofi --show dmenu
 
     # Browser for opening urls in context menu.
     browser = /usr/bin/xdg-open
@@ -296,8 +296,8 @@
     # These values can be strung together for each mouse event, and
     # will be executed in sequence.
     mouse_left_click = do_action,close_current
-    mouse_middle_click = close_current
-    mouse_right_click = context
+    mouse_middle_click = context
+    mouse_right_click = close_current
 
 # Experimental features that may or may not work correctly. Do not expect them
 # to have a consistent behaviour across releases.
@@ -313,24 +313,24 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#000000"
-    frame_color = "#888888"
+    background = "#000000DD"
+    frame_color = "#888888DD"
     foreground = "#FFFFFF"
     timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
     #default_icon = /path/to/icon
 
 [urgency_normal]
-    background = "#000000"
-    foreground = "#FFFFFF"
-    frame_color = "#FFFFFF"
+    background = "#000000DD"
+    foreground = "#FFFFFFDD"
+    frame_color = "#FFFFFFDD"
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
     #default_icon = /path/to/icon
 
 [urgency_critical]
-    background = "#000000"
-    foreground = "#FFFFFF"
+    background = "#000000DD"
+    foreground = "#FFFFFFDD"
     frame_color = "#FF0024"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
@@ -468,4 +468,12 @@
     alignment = center
     appname = brightness
     highlight = "#FFFFFF"
-    format = "󰃞"
+    format = "%s"
+    timeout = 2
+
+[volume]
+    alignment = center
+    appname = volume
+    highlight = "#FFFFFF"
+    format = "%s"
+    timeout = 2

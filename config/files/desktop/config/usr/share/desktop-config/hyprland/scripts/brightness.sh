@@ -7,11 +7,23 @@ value="$2"
 
 case "$action" in
   "up")
-  brillo -A "$value%" -q -u 100000
+  brillo -A "$value%" -u 100000
   ;;
 
   "down")
-  brillo -U "$value%" -q -u 100000
+  brillo -U "$value%" -u 100000
   ;;
 esac
-brillo | xargs -i dunstify brightness -a brightness -h int:value:{}
+
+value=$(brillo | cut -d '.' -f 1)
+
+if [[ $value -gt 70 ]]; then
+  character="󰃠"
+elif [[ $value -gt 40 ]]; then
+  character="󰃟"
+else
+  character="󰃞"
+fi
+
+
+dunstify -a brightness -h "int:value:$value" "$character" -r 10001

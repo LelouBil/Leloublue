@@ -122,23 +122,23 @@ tooltip {
 
 #network {
     padding-left: 1em;
-    padding-right: 0.3em;
+    padding-right: 0.7em;
     border-left-color: #FF0024;
     border-left-style: solid;
     border-left-width: 3px;
 }
 
 #tray {
-    padding-left: 1.3em;
+    padding-left: 1.2em;
     border-left-color: #FF0024;
     border-left-style: solid;
     border-left-width: 3px;
-    margin: 0 1em;
+    /*margin-left: 1em;*/
 }
 
 
 #bluetooth {
-    margin-right: 1em;
+    padding-right: 1em;
 }
 
 #battery {
