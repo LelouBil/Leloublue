@@ -22,6 +22,8 @@ modules:
       - hyprlock
       - hypridle
       - hyprpicker
+      - udiskie
+      - gammastep
   - type: files
     files:
       - "desktop/config": /
