@@ -1,1 +1,1 @@
-export XDG_DATA_DIRS="$XDG_DATA_DIRS:$HOME/.local/share"
+export XDG_DATA_DIRS="$XDG_DATA_DIRS:$HOME/.local/share:/usr/share"
