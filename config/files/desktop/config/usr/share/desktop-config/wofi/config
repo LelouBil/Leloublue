@@ -1,0 +1,9 @@
+width=600
+style=$WOFI_STYLE_FILE
+height=400
+mode=drun
+prompt=
+allow_images=true
+allow_markup=true
+filter_rate=100
+key_expand=Super_L

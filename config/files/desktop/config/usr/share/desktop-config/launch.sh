@@ -17,6 +17,11 @@ export SYSTEM_EWW="eww -c \"$EWW_CONFIG_DIR\" "
 export DUNST_CONFIG_DIR="$DESKTOP_CONFIG_DIR/dunst"
 export DUNST_CONFIG_FILE="$DUNST_CONFIG_DIR/dunstrc"
 
+export WOFI_CONFIG_DIR="$DESKTOP_CONFIG_DIR/wofi"
+export WOFI_CONFIG_FILE="$WOFI_CONFIG_DIR/config"
+export WOFI_STYLE_FILE="$WOFI_CONFIG_DIR/style.css"
+
+
 # used variables
 export KITTY_CONFIG_DIRECTORY="$KITTY_CONFIG_DIR"
 

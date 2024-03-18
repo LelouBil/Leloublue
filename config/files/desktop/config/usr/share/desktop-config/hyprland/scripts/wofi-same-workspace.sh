@@ -17,5 +17,5 @@ function handle {
   fi
 }
 target_wp="$(hyprctl activeworkspace -j | jq .id)"
-wofi --show drun
+wofi --config "$WOFI_CONFIG_FILE"
 timeout 4 socat - "UNIX-CONNECT:/tmp/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock" | while read -r line; do handle "$line"; done
