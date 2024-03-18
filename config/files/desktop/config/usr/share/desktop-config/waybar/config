@@ -91,7 +91,7 @@
         "format":"{volume}% 󰕾"
     },
     "custom/dnd": {
-        "exec":"(dunstctl is-paused| grep true > /dev/null) && echo '󰂜' || echo '󰪑'",
+        "exec":"(dunstctl is-paused | grep true > /dev/null) && echo '󰪑' || echo '󰂜'",
         "interval":"once",
         "on-click":"dunstctl set-paused toggle"
     },
