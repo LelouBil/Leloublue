@@ -9,11 +9,3 @@ unfocus = "hide"
 size = "75% 60%"
 max_size = "1920px 100%"
 margin = 100
-
-[scratchpads.clipboard]
-animation = "fromLeft"
-command = "copyq show"
-class = "com.github.hluk.copyq"
-unfocus = "hide"
-size = "20% 40%"
-margin = 100
