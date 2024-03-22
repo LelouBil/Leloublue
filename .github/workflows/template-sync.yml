@@ -25,5 +25,6 @@ jobs:
       - name: actions-template-sync
         uses: AndreasAugustin/actions-template-sync@v2
         with:
+          github_token: ${{ secrets.SYNC_TOKEN }}
           source_repo_path: blue-build/template
           upstream_branch: main
