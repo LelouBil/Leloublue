@@ -1,3 +1,4 @@
+name: Sync with template
 on:
     # cronjob trigger
   schedule:
