@@ -37,9 +37,18 @@ modules:
     files:
       - "desktop/sddm": /
   # util
+  - type: default-flatpaks
+    notify: true
+    user:
+      install:
+        - org.flameshot.Flameshot
+
   - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/leloubil/wl-clip-persist/repo/fedora-%OS_VERSION%/leloubil-wl-clip-persist-fedora-%OS_VERSION%.repo
     install:
       - copyq
+      - wl-clip-persist
       # - hyprpicker
   # compatibilité
   - type: rpm-ostree
