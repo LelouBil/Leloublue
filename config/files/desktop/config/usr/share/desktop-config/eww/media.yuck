@@ -1,0 +1,78 @@
+
+(deflisten media-status :initial "Paused" "playerctl -F status")
+
+(deflisten media-title :initial "" "playerctl -F metadata xesam:title")
+
+(deflisten media-art :initial "" "playerctl -F metadata mpris:artUrl | stdbuf -o 0 grep -oP 'file://\\K\\S+'")
+
+(deflisten media-album :initial "" "playerctl -F metadata xesam:album")
+(deflisten media-artist :initial "" "playerctl -F metadata xesam:artist")
+(deflisten media-player :initial "" "playerctl -F metadata mpris:trackid | stdbuf -o 0 tr -d \"'\" | cut -d '/' -f 5")
+
+(defwindow  media-notification
+            :class "media"
+            :monitor 0
+            :geometry (geometry :x "1.5%"
+                                :y "2%"
+                                :width "20%"
+                                :height "10%"
+                                :anchor "top right")
+            :stacking "overlay"
+  (media-main)
+)
+
+(defwidget media-main []
+    (box
+        :style "background-color: black; border: 2px solid white;padding: 0.5em;"
+        :orientation "horizontal"
+
+        :space-evenly false
+        :spacing 10
+        (media-image) (box
+         :hexpand true
+         :width 10
+         :height 2
+         :orientation "vertical"
+         :spacing 10
+            (text) (status)
+        )
+    )
+)
+
+
+(defwidget media-image []
+     (image :image-width 100 :image-height 100 :path "${media-art}")
+;    (label "${media-art}")
+    )
+
+(defwidget text []
+    (box
+    :orientation "vertical"
+
+    (label
+    :limit-width 25
+     :text "${media-title}")
+
+    (label
+    :limit-width 15
+     :text "${media-artist}")
+    )
+)
+
+(defwidget status []
+    (box :width 1
+    :height 1
+    :space-evenly false
+    :halign "center"
+    :hexpand false
+    (button
+    :style "border-width: 2px"
+    :hexpand false
+    :width 40
+    :halign "center"
+    :height 5
+    :onclick "playerctl play-pause"
+    "${media-status == 'Playing' ? '' : ''}"
+    )
+    )
+)

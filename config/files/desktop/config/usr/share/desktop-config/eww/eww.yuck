@@ -1,1 +1,3 @@
 (include "powermenu.yuck")
+
+(include "media.yuck")
