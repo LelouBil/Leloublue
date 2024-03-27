@@ -1,9 +1,24 @@
 
 (deflisten media-status :initial "Paused" "playerctl -F status")
+; seconds
+(deflisten media-length :initial "0" "playerctl -F metadata mpris:length | xargs -i echo '{} / 1000000' | bc")
+
+(deflisten media-lenght-formatted :initial "-:-" "playerctl -F metadata mpris:length | xargs -i echo '{} / 1000000' | bc | xargs -i date -d@{} +%M:%S")
+
+(defvar time-visible false)   ; for :run-while property of below variable
+                              ; when this turns true, the polling starts and
+                              ; var gets updated with given interval
+
+(defpoll media-time :interval "1s"
+              :run-while time-visible   ; optional, defaults to 'true'
+  "playerctl position | cut -d '.' -f 1 || echo 1")
+
+(defpoll media-time-formatted :interval "1s" :initial "00:00" :run-while time-visible "playerctl position | cut -d '.' -f 1  | xargs -i date -d@{} +%M:%S")
+
 
 (deflisten media-title :initial "" "playerctl -F metadata xesam:title")
 
-(deflisten media-art :initial "" "playerctl -F metadata mpris:artUrl | stdbuf -o 0 grep -oP 'file://\\K\\S+'")
+(deflisten media-art :initial "" "playerctl -F metadata mpris:artUrl")
 
 (deflisten media-album :initial "" "playerctl -F metadata xesam:album")
 (deflisten media-artist :initial "" "playerctl -F metadata xesam:artist")
@@ -34,27 +49,44 @@
          :height 2
          :orientation "vertical"
          :spacing 10
-            (text) (status)
-        )
+            (text)
+        ) (status)
     )
 )
 
 
 (defwidget media-image []
-     (image :image-width 100 :image-height 100 :path "${media-art}")
-;    (label "${media-art}")
+     (box :width 70 :height 70
+     :valign "center"
+     :style 'background-image: url("${media-art}"); background-size: contain; background-repeat: no-repeat;'
+
     )
+;    (label "${media-art}")
+
+)
 
 (defwidget text []
     (box
     :orientation "vertical"
 
     (label
-    :limit-width 25
+    :limit-width 40
+    :halign "center"
      :text "${media-title}")
 
+    (box
+    :hexpand true
+    (progress
+        :halign "start"
+        :valign "center"
+        :value "${(media-time / media-length) * 100}"
+        :orientation "h"
+    )
+    (label :halign "center" :text "${media-time-formatted}/${media-lenght-formatted}")
+)
+
     (label
-    :limit-width 15
+    :limit-width 40
      :text "${media-artist}")
     )
 )
@@ -65,13 +97,12 @@
     :space-evenly false
     :halign "center"
     :hexpand false
-    (button
-    :style "border-width: 2px"
+    (label
+    :style "border-width: 2px; padding-right: 15px"
     :hexpand false
-    :width 40
+    :width 20
     :halign "center"
-    :height 5
-    :onclick "playerctl play-pause"
+    :height 5 :text
     "${media-status == 'Playing' ? '' : ''}"
     )
     )

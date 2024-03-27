@@ -9,6 +9,13 @@
   font-size: x-large;
 }
 
+progressbar > trough{
+  min-width: 2em;
+}
+progress {
+  background-color: white;
+}
+
 .media{
   background-color: black;
   border-radius: 0;

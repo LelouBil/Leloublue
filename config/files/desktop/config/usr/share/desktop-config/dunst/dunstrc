@@ -430,7 +430,7 @@
 #    history_ignore = yes
 
 #[skip-display]
-#    # This notification will not be displayed, but will be included in the history
+#    # This notification will not be displayed, budesktop_entry: 'com.spotify.Client't will be included in the history
 #    summary = "foobar"
 #    skip_display = yes
 
@@ -463,6 +463,9 @@
     desktop_entry = dev.vencord.Vesktop
     format = "󰙯 <b>%s</b>\n\n%b"
 
+[spotify]
+    desktop_entry = com.spotify.Client
+    skip_display = true
 
 [brightness]
     alignment = center
