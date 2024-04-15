@@ -42,7 +42,8 @@
         "format-off":"",
         "format-disabled":"",
         "format-on":"",
-        "format-connected":"󰂰"
+        "format-connected":"󰂰",
+        "on-click": "flatpak ps | grep io.emeric.toolblex && flatpak kill io.emeric.toolblex || flatpak run io.emeric.toolblex"
     },
     "clock#time":{
         "format":"{:󰥔 %H:%M}",

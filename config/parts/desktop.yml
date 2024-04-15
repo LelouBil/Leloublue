@@ -41,7 +41,7 @@ modules:
     notify: true
     user:
       install:
-        - org.flameshot.Flameshot
+        - io.emeric.toolblex
 
   - type: rpm-ostree
     repos:
