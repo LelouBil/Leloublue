@@ -1,6 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
+# il faut que le script soit mis en handler URL
 url="$1"
 
 workspace=$(hyprctl clients -j | jq '.[] | select(.class == "org.mozilla.firefox") | .workspace.name' -r)
