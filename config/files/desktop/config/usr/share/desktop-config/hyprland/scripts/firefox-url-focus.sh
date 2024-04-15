@@ -4,9 +4,9 @@ set -euo pipefail
 # il faut que le script soit mis en handler URL
 url="$1"
 
-workspace=$(hyprctl clients -j | jq '.[] | select(.class == "org.mozilla.firefox") | .workspace.name' -r)
+workspace=$(hyprctl clients -j | jq '[.[] | select(.class == "org.mozilla.firefox")][0] | .workspace.name' -r)
 
-address=$(hyprctl clients -j | jq '.[] | select(.class == "org.mozilla.firefox") | .address' -r)
+address=$(hyprctl clients -j | jq '[.[] | select(.class == "org.mozilla.firefox")][0] | .address' -r)
 
 flatpak run org.mozilla.firefox -new-tab "$url"
 
