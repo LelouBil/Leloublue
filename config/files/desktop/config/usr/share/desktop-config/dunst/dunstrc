@@ -464,7 +464,7 @@
     format = "󰙯 <b>%s</b>\n\n%b"
 
 [spotify]
-    desktop_entry = com.spotify.Client
+    appname = "Spotify"
     skip_display = true
 
 [brightness]
