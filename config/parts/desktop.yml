@@ -37,11 +37,11 @@ modules:
     files:
       - "desktop/sddm": /
   # util
-  - type: default-flatpaks
-    notify: true
-    user:
-      install:
-        - io.emeric.toolblex
+  #  - type: default-flatpaks
+  #    notify: true
+  #    user:
+  #      install:
+  #        - overskride-nightly
 
   - type: rpm-ostree
     repos:
