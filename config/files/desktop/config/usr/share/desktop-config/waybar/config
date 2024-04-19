@@ -43,7 +43,7 @@
         "format-disabled":"",
         "format-on":"",
         "format-connected":"󰂰",
-        "on-click": "flatpak ps | grep io.emeric.toolblex && flatpak kill io.emeric.toolblex || flatpak run io.emeric.toolblex"
+        "on-click": "flatpak ps | grep io.github.kaii_lb.Overskride && flatpak kill io.github.kaii_lb.Overskride || flatpak run io.github.kaii_lb.Overskride"
     },
     "clock#time":{
         "format":"{:󰥔 %H:%M}",
