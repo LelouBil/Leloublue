@@ -89,7 +89,8 @@
     },
     "pulseaudio":{
         "format-muted":"󰖁",
-        "format":"{volume}% 󰕾"
+        "format":"{volume}% 󰕾",
+        "on-click":"flatpak ps | grep org.pulseaudio.pavucontrol && flatpak kill org.pulseaudio.pavucontrol || flatpak run org.pulseaudio.pavucontrol"
     },
     "custom/dnd": {
         "exec":"sleep 1; (dunstctl is-paused | grep true > /dev/null) && echo '󰪑' || echo '󰂜'",
