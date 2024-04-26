@@ -1,0 +1,14 @@
+modules:
+  - type: rpm-ostree
+    install:
+      - qemu-img
+      - qemu-kvm
+      - virt-manager
+      - virt-v2v
+  - type: files
+    files:
+      - "system/kvm": /
+  - type: systemd
+    system:
+      enabled:
+        - libvirtd.service

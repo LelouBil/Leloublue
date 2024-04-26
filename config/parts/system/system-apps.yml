@@ -5,6 +5,8 @@ modules:
   - type: rpm-ostree
     install:
       - ydotool
+      - strace
+      - wev
   - type: files
     files:
       - "system/system-apps/distrobox": /

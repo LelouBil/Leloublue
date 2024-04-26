@@ -22,8 +22,17 @@ modules:
   - type: files
     files:
       - "system/profile": /
+  - type: files
+    files:
+      - "system/sysctl": /
+  - from-file: parts/system/docker.yml
+  - from-file: parts/system/kvm.yml
   - from-file: parts/system/justfile.yml
   - from-file: parts/system/system-apps.yml
+  - type: akamods
+    install:
+      - framework-laptop
+      - v4l2loopback
   - type: script
     scripts:
       - "system/delete-unnecessary-files.sh"

@@ -45,17 +45,22 @@
  systemd/system.control/?(.*)$
  systemd/system/default.target
  systemd/system/(.*)/?ensure-symlinked-units-resolve.service$
+ systemd/system/(.*)/?ensure-symlinked-units-resolve.service$
  systemd/system/(.*)/?dmraid-activation.service$
  sysconfig/anaconda$
  sysconfig/network$
  tuned/active_profile$
+ libvirt/(.*)$
  containers/networks$
  tuned/profile_mode$
+ bluebuild$
  modprobe.d/tuned.conf$
  ssh/(.*)_key(\.pub)?$
  ublue-update.d(/.*)*$
  brlapi.key$
  ld.so.cache$
+ bazzite$
+ .rpm-ostree-shadow-mode-fixed.stamp$
  pki/(/.*)*$
  sgml
  skel
