@@ -28,8 +28,8 @@ modules:
   - from-file: parts/system/system-apps.yml
   - type: akmods
     base: fsync
-    install:
-      - framework-laptop
+    install: []
+#      - framework-laptop
   - type: script
     scripts:
       - "system/delete-unnecessary-files.sh"
