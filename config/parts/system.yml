@@ -29,7 +29,6 @@ modules:
   - type: akmods
     install:
       - framework-laptop
-      - v4l2loopback
   - type: script
     scripts:
       - "system/delete-unnecessary-files.sh"
