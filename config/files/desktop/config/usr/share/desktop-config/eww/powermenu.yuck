@@ -27,19 +27,19 @@
                                 :width "40%"
                                 :height "10%"
                                 :anchor "top center")
-            :stacking "overlay"
+            :stacking "fg"
   (main)
 )
 
 (defwindow  powermenu-confirm
-            :class "powermenu"
+            :class "fg"
             :monitor 0
             :geometry (geometry :x "10%"
                                 :y "38.5%"
                                 :width "40%"
                                 :height "10%"
                                 :anchor "top center")
-            :stacking "overlay"
+            :stacking "fg"
     (revealer :duration "10ms"
         :reveal {power-action == "" ? false : true}
   (box :hexpand false :spacing 10
