@@ -1,0 +1,25 @@
+[Unit]
+Description=The Prey daemon.
+After=network.target
+
+[Service]
+ExecStart=/usr/share/prey-agent/bin/prey
+
+WorkingDirectory=/usr/share/prey-agent
+
+Restart=always
+
+RestartSec=15
+
+User=prey
+
+Environment="USER=prey"
+
+KillMode=process
+
+TimeoutStopSec=20
+
+KillSignal=QUIT
+
+[Install]
+WantedBy=multi-user.target

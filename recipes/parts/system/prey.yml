@@ -1,0 +1,10 @@
+modules:
+  - type: rpm-ostree
+    install:
+      - nodejs20
+  - type: script
+    scripts:
+      - "system/install-prey.sh"
+  - type: files
+    files:
+      - "system/prey": /

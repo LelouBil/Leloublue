@@ -7,6 +7,7 @@ modules:
       - git-delta
       - python3.10
       - python3.10-devel
+      - nodejs20
   - type: files
     files:
       - "system/fingerprint": /
@@ -26,6 +27,7 @@ modules:
   - from-file: parts/system/kvm.yml
   - from-file: parts/system/justfile.yml
   - from-file: parts/system/system-apps.yml
+  - from-file: parts/system/prey.yml
   - type: akmods
     base: fsync
     install: []
