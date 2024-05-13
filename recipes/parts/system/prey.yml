@@ -8,3 +8,7 @@ modules:
   - type: files
     files:
       - "system/prey": /
+  - type: systemd
+    system:
+      enabled:
+        - prey-agent.service

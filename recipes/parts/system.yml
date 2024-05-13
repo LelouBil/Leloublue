@@ -35,10 +35,6 @@ modules:
   - type: script
     scripts:
       - "system/delete-unnecessary-files.sh"
-  - type: akmods
-    base: main
-    install:
-      - framework
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
