@@ -46,11 +46,11 @@
         "on-click": "flatpak ps | grep io.github.kaii_lb.Overskride && flatpak kill io.github.kaii_lb.Overskride || flatpak run io.github.kaii_lb.Overskride"
     },
     "clock#time":{
-        "format":"{:󰥔 %H:%M}",
+        "format":"󰥔 {:%H:%M}",
         "locale":"fr_FR.UTF-8",
     },
   "clock#date": {
-    "format": "{:\uDB80\uDCED %A %d/%m}",
+    "format": "\uDB80\uDCED {:%A %d/%m}",
     "locale":"fr_FR.UTF-8",
     "tooltip-format": "<span font_family='VCR OSD Mono' line_height='2'>{calendar}</span>",
     "calendar": {
