@@ -42,7 +42,9 @@ modules:
   #    user:
   #      install:
   #        - overskride-nightly
-
+  - type: files
+    files:
+      - "desktop/polkit-kde-agent-scale": /
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/leloubil/wl-clip-persist/repo/fedora-%OS_VERSION%/leloubil-wl-clip-persist-fedora-%OS_VERSION%.repo
