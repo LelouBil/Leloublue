@@ -3,6 +3,10 @@ modules:
     scripts:
       - "system/system-apps/install-dive-rpm.sh"
       - "system/system-apps/install-goldwarden.sh"
+  - type: systemd
+    user:
+      enabled:
+        - "goldwarden.service"
   - type: rpm-ostree
     install:
       - ydotool
