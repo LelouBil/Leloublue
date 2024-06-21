@@ -24,7 +24,7 @@
             :monitor 0
             :geometry (geometry :x "10%"
                                 :y "35%"
-                                :width "40%"
+                                :width "45%"
                                 :height "10%"
                                 :anchor "top center")
             :stacking "overlay"
@@ -35,8 +35,8 @@
             :class "fg"
             :monitor 0
             :geometry (geometry :x "10%"
-                                :y "38.5%"
-                                :width "40%"
+                                :y "40%"
+                                :width "45%"
                                 :height "10%"
                                 :anchor "top center")
             :stacking "overlay"
@@ -74,7 +74,7 @@
 (defwidget main_buttons []
     (box :style "background-color: transparent"
         :active { power-action == "" ? true : false }
-        :height 150 :spacing 10
+        :height 120 :spacing 10
         :space-evenly false
 
       (box :hexpand true :spacing 10
