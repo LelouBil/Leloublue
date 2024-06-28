@@ -1,0 +1,4 @@
+cosign.pub
+.gitignore
+config/*
+recipes/*
