@@ -35,3 +35,5 @@ export KITTY_CONFIG_DIRECTORY="$KITTY_CONFIG_DIR"
 
 # run wm
 Hyprland --config "$HYPRLAND_CONFIG_FILE"
+
+systemctl --user stop hyprland-session.target
