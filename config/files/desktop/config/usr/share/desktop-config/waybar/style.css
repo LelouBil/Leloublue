@@ -4,7 +4,7 @@
     font-size: 10pt;
     border: none;
     border-radius: 0;
-    color: white;
+    /* color: white; */
     /* CSS HEX */
     /*--vivid-sky-blue: #17DCF5ff;*/
     /*--black-bean: #290100ff;*/
@@ -16,9 +16,11 @@
 
 .time {
     margin-left: 2em;
+    color: white;
 }
 .date {
     margin-left: 2em;
+    color: white;
 }
 
 
@@ -36,6 +38,7 @@ window#waybar {
 
 #workspaces {
     background-color: #000000;
+    color: white;
     /*border-top-left-radius: 10px;*/
     /*border-bottom-left-radius: 10px;*/
     /*margin-left: 0.2em;*/
@@ -51,6 +54,7 @@ window#waybar {
     border-color: #FF0024;
     border-width: 3px;
     border-style: none solid none none;
+    color: white;
     /*margin: 0 0.2em;*/
 
 }
@@ -93,6 +97,7 @@ tooltip {
 
 .modules-left {
     background-color:transparent;
+    color: white;
     min-width: 700px;
     /*border-radius: 10px;*/
     background-position: -5px 0;
@@ -104,6 +109,7 @@ tooltip {
 .modules-center {
     background-color: transparent;
     min-width: 35.5em;
+    color: black;
     margin-left: -9.5em;
     border: none;
     background-position: -30px 0;
@@ -119,11 +125,13 @@ tooltip {
     border-left-color: #FF0024;
     border-left-style: solid;
     border-left-width: 3px;
+    color: white;
 }
 
 #custom-dnd{
     padding-left: 0.65em;
     padding-right: 0.8em;
+    color: white;
 }
 
 #network {
@@ -132,6 +140,7 @@ tooltip {
     border-left-color: #FF0024;
     border-left-style: solid;
     border-left-width: 3px;
+    color: white;
 }
 
 #tray {
@@ -140,12 +149,14 @@ tooltip {
     border-left-style: solid;
     border-left-width: 3px;
     /*margin-left: 1em;*/
+    color: white;
 }
 
 
 
 #bluetooth {
     padding-right: 1em;
+    color: white;
 }
 
 #battery {
@@ -155,6 +166,7 @@ tooltip {
     border-left-color: #FF0024;
     border-left-style: solid;
     border-left-width: 3px;
+    color: white;
 }
 
 @keyframes blink {
@@ -184,6 +196,7 @@ tooltip {
     min-width: 29.1em;
     border: none;
     padding-right: 0;
+    color: white;
     /*border-top-right-radius: 10px;*/
     /*border-bottom-right-radius: 10px;*/
 }
