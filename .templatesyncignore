@@ -2,3 +2,5 @@ cosign.pub
 .gitignore
 config/*
 recipes/*
+files/scripts/example.sh
+files/system/usr/.gitkeep
