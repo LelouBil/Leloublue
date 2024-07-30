@@ -12,6 +12,7 @@ modules:
       - ydotool
       - strace
       - wev
+      - acpid
   - type: files
     files:
       - "system/system-apps/distrobox": /
