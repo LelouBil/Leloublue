@@ -15,4 +15,5 @@ modules:
       - acpid
   - type: files
     files:
-      - "system/system-apps/distrobox": /
+      - source: system/system-apps/distrobox
+        destination:  /

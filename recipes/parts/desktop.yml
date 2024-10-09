@@ -26,16 +26,20 @@ modules:
       - gammastep
   - type: files
     files:
-      - "desktop/config": /
+      - source: desktop/config
+        destination:  /
   - type: files
     files:
-      - "desktop/fonts": /
+      - source: desktop/fonts
+        destination:  /
   - type: files
     files:
-      - "desktop/sessions": /
+      - source: desktop/sessions
+        destination:  /
   - type: files
     files:
-      - "desktop/sddm": /
+      - source: desktop/sddm
+        destination:  /
   # util
   #  - type: default-flatpaks
   #    notify: true
@@ -44,7 +48,8 @@ modules:
   #        - overskride-nightly
   - type: files
     files:
-      - "desktop/polkit-kde-agent-scale": /
+      - source: desktop/polkit-kde-agent-scale
+        destination:  /
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/leloubil/wl-clip-persist/repo/fedora-%OS_VERSION%/leloubil-wl-clip-persist-fedora-%OS_VERSION%.repo

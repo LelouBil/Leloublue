@@ -11,27 +11,33 @@ modules:
       - gamescope-session-steam
   - type: files
     files:
-      - "system/fingerprint": /
+      - source: system/fingerprint
+        destination: /
   - type: files
     files:
-      - "system/power": /
+      - source: system/power
+        destination: /
   - type: files
     files:
-      - "system/firewall": /
+      - source: system/firewall
+        destination:  /
   - type: files
     files:
-      - "system/profile": /
+      - source: system/profile
+        destination:  /
   - type: files
     files:
-      - "system/sysctl": /
+      - source: system/sysctl
+        destination:  /
   - from-file: parts/system/docker.yml
   - from-file: parts/system/kvm.yml
   - from-file: parts/system/justfile.yml
   - from-file: parts/system/system-apps.yml
   - from-file: parts/system/prey.yml
-#  - type: akmods
-#    base: fsync
-#    install: []
+  - type: akmods
+    base: fsync
+    install:
+      - kvmfr
 #      - framework-laptop
   - type: script
     scripts:

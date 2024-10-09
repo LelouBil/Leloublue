@@ -1,7 +1,8 @@
 modules:
   - type: files
     files:
-      - "system/justfile": /
+      - source: system/justfile
+        destination:  /
   - type: script
     scripts:
       - "system/justfile/add-custom-justfile.sh"

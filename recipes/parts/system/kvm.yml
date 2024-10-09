@@ -7,7 +7,8 @@ modules:
       - virt-v2v
   - type: files
     files:
-      - "system/kvm": /
+      - source: system/kvm
+        destination:  /
   - type: systemd
     system:
       enabled:
