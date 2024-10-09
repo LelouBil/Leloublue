@@ -34,10 +34,10 @@ modules:
   - from-file: parts/system/justfile.yml
   - from-file: parts/system/system-apps.yml
   - from-file: parts/system/prey.yml
-  - type: akmods
-    base: fsync
-    install:
-      - kvmfr
+#  - type: akmods
+#    base: fsync
+#    install:
+#      - kvmfr
 #      - framework-laptop
   - type: script
     scripts:
